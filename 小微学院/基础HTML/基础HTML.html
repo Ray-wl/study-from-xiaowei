@@ -4,13 +4,286 @@
 	<meta charset="UTF-8">
 	<title>基础HTML</title>
 	<style type="text/css">
-
+		* {
+			margin:0;
+			padding:0;
+		}
+		a {
+			text-decoration:none;
+		}
+		body {
+			background:#DEDEDE;
+		}
+		#web-nav {
+			width:100%;
+			height:70px;
+			background: #222222;
+		}
+		#web-nav h1 {
+			color:#ffffff;
+			float:left;
+			line-height:70px;
+			margin-left:40px;
+			cursor:pointer;
+		}
+		#web-menu {
+			width:900px;
+			margin:0 auto;
+		}
+		#web-menu ul {
+			height:70px;
+			float:right;
+			padding:20px 0;
+		}
+		#web-menu ul li {
+			float:left;
+			width:70px;
+			height:30px;
+			color:#ccc;
+			margin-left:20px;
+		}
+		#web-menu ul li:hover,#web-menu ul li:hover a {
+			color:#EA5527;
+			font-size:0.9em;
+		}
+		#web-menu ul a {
+			color:#ccc;
+			font-size:0.75em;
+			line-height:30px;
+		}
+		#paper-1,#paper-2,#paper-3,#sidebar {
+			box-sizing:border-box;
+			width:900px;
+			border:1px solid rgba(0,0,0,0.3);
+			margin:10px auto;
+			background: #fff;
+			box-shadow:2px 2px 0 0 rgba(0,0,0,0.3);
+			padding:40px 30px 30px;
+		}
+		img {
+			display: block;
+		}
+		#pic img {
+			margin-top:10px;
+			border:1px solid #ccc;
+			padding:10px;;
+			width:150px;
+		}
+		h2 {
+			margin-bottom:20px;
+		}
+		h3 {
+			margin:20px 0 20px;
+			color:rgba(0,0,0,0.8);
+		}
+		h4 {
+			margin:10px 0 10px;
+		}
+		p {
+			text-indent:2em;
+			line-height:1.7em;
+			margin:10px 0;
+			text-align:justify;
+		}
+		.date {
+			text-indent:0em;
+			color:rgba(0,0,0,0.6);
+			font-size:0.9em;
+			font-weight:bold;
+		}
+		#paper-2 ul,#paper-3 ol {
+			margin-left:50px;
+		}
+		#paper-2 ul li {
+			line-height:30px;
+		}
+		#paper-2 ul a {
+			color:rgba(0,0,0,1);
+		}
+		#paper-3 h4 {
+			text-indent:2em;
+			font-size:0.95em;
+		}
+		#paper-3 h4 span {
+			font-size:0.7em;
+			font-weight:normal;
+		}
+		ol li {
+			line-height:30px;
+		}
+		#paper-3 table {
+			width:95%;
+			margin:0 auto;
+			text-align:center;
+			border-collapse: collapse;
+			font-size:0.8em;
+			line-height:26px;
+			border:1px solid #ccc;
+		}
+		#paper-3 th,td {
+			border:1px solid #ccc;
+		}
+		#paper-3 th {
+			background: rgba(0,0,0,0.8);
+			color:#fff;
+		}
+		#paper-3 tr:last-child {
+			background: #ccc;
+			font-weight:bold;
+		}
+		#paper-3 tr td:first-child {
+			width:40%;
+		}
+		#paper-3 tr td:last-child {
+			width:15%;
+		}
+		#sidebar {
+			font-size:0.8em;
+		}
+		#sidebar table {
+			width:90%;
+			margin:0 auto;
+		}
+		#sidebar table td {
+			border:none;
+			padding-left:20px;
+			height:30px;
+		}
+		#sidebar td:first-child {
+			text-align:right;
+		}
+		#sidebar td:last-child {
+			text-align:left;
+		}
+		#sidebar textarea {
+			width:80%;
+			height:90px;
+			padding:5px 10px;
+		}
+		#sidebar input[type=text],#sidebar input[type=password] {
+			width:35%;
+			height:22px;
+			padding:0 10px;
+			border:1px solid #ccc;
+			font-size:0.9em;
+		}
+		.gray {
+			font-size:0.9em;
+			color:rgba(0,0,0,0.5);
+		}
+		#btn {
+			width:95%;
+			height:40px;
+			border-radius:10px;
+			background:#3355D0;
+			border:none;
+			color:#fff;
+			font-size:1.2em;
+			font-weight:bold;
+			cursor:pointer;
+			display: block;
+			margin:20px auto 0;
+		}
+		#sidebar h3 {
+			margin-top:0px;
+		}
+		#sidebar input[type=radio] {
+			display: none;
+		}
+		#sidebar input[type=radio] + label {
+			margin-left:20px;
+			margin-right:5px;
+			display: inline-block;
+			width:13px;
+			height:13px;
+			box-sizing:border-box;
+			border-radius:100%;
+			border:1px solid rgba(0,0,0,0.4);
+		}
+		#sidebar input[type=radio]:checked + label {
+			border:4px solid #3499FF;
+		}
+		#sidebar input[type=radio]:first-child + label {
+			margin-left:0px;
+		}
+		#sidebar input[type=checkbox] {
+			display: none;
+		}
+		#sidebar input[type=checkbox] + label {
+			display: inline-block;
+			width:9px;
+			height:9px;
+			border-radius:2px;
+			border:1px solid rgba(0,0,0,0.5);
+			margin:0 2px 0 5px;
+		}
+		#sidebar input[type=checkbox]:checked + label {
+			border-color:#3499FF;
+			background: #3499FF;
+		}
+		select {
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			0 0 3pxborder:none;
+			background: transparent;
+			width:100%;
+			height:20px;
+			font-size:0.85em;
+			text-align:center;
+			line-height:20px;
+			border-radius:3px 0 0 3px;
+			border:1px solid rgba(0,0,0,0.5);
+			display: block;
+			/*background: red;*/
+		}
+		#cities {
+			width:50px;
+			height:20px;
+			display: block;
+			position:relative;
+		}
+		#cities:before {
+			box-sizing:border-box;
+			content:"";
+			width:15px;
+			height:20px;
+			background: #3499FF;
+			position:absolute;
+			top:0px;
+			right:-14px;
+			display: inline-block;
+			border-radius:0 3px 3px 0;
+			border:1px solid #777;
+			border-left:none;
+		}
+		#cities:after {
+			content:"";
+			width:6px;
+			height:6px;
+			position:absolute;
+			top:50%;
+			margin-top:-3px;
+			right:-9px;
+			display: inline-block;
+			transform: rotate(45deg) skew(-10deg,-10deg);
+			box-shadow:2px 2px 0 0 #fff,-2px -2px 0 0 #fff;
+		}
+		#footer {
+			width:100%;
+			height:60px;
+			text-align:center;
+			line-height:60px;
+			font-size:1em;
+			color:#ffffff;
+			background: #222222;
+		}
 	</style>
 </head>
 <body>
 	<div id="web-nav">
-		<h1>网站一级标题</h1>
 		<div id="web-menu">
+			<h1>第二次世界大战简史</h1>
 			<ul>
 				<li class="web-menu"><a href="#">导航链接一</a></li>
 				<li class="web-menu"><a href="#">导航链接二</a></li>
@@ -20,21 +293,21 @@
 		</div>
 	</div>
 	<div id="paper-1">
-		<h2>文章一级标题</h2>
-		<h3>文章二级标题</h3>
-		<p>文章作者  文章发表时间</p>
+		<h2>第二次世界大战</h2>
+		<h3>事件简述</h3>
+		<p class="date">文章作者  文章发表时间</p>
 		<p>第二次世界大战（World War II，简称二战，亦可称世界反法西斯战争）。1939年9月1日—1945年9月2日，以德意志第三帝国、意大利王国、日本帝国三个法西斯轴心国和匈牙利王国、罗马尼亚王国、保加利亚王国等仆从国为一方，以<a href="http://www.baidu.com">反法西斯同盟</a>和全世界反法西斯力量为另一方进行的第二次全球规模的战争。</p>
-		<img src="http://thumbnail0.baidupcs.com/thumbnail/fa8b43f25deef7544bd20c48114355aa?fid=1428530494-250528-671428094491423&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ymIrlQ%2BE7wT6gV66s6JYr%2Fg2SjY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407684581849662841&dp-callid=0&size=c710_u400&quality=100" alt="诺曼底登陆">
+		<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/1.png?raw=true" alt="诺曼底登陆">
 		<p>从欧洲到亚洲，从大西洋到太平洋，先后有61个国家和地区、20亿以上的人口被卷入战争，作战区域面积2200万平方千米。据不完全统计，战争中军民共伤亡9000余万人，4万多亿美元付诸流水。</p>
 		<p>第二次世界大战最后以美国、苏联、英国、<a href="http://www.sina.com.cn">中华民国</a>等反法西斯国家和世界人民战胜法西斯侵略者赢得世界和平与进步而告终。</p>
 	</div>
 	<div id="paper-2">
-		<h2>战争背景</h2>
+		<h2>第二次世界大战战争背景</h2>
 		<h3>慕尼黑阴谋</h3>
-		<p>文章作者  文章发表时间</p>
+		<p class="date">文章作者  文章发表时间</p>
 		<p>1938年3月，德意志第三帝国并吞了奥地利。接着，希特勒以保护捷克斯洛伐克境内德意志少数民族的利益为借口，对捷克斯洛伐克提出领土要求。面对德意志第三帝国法西斯的咄咄逼人的侵略，英法两国以牺牲捷克斯洛伐克的利益，并与希特勒达成协议，希望把德意志第三帝国的侵略矛头引向苏联。</p>
 		<p>1938年9月，英、法、德、意四国首脑阿瑟·尼维尔·张伯伦、爱德华·达拉第、<a href="http://www.baidu.com">阿道夫·希特勒</a>和贝尼托·墨索里尼在德意志第三帝国的慕尼黑开会，签订协议，在没有捷克斯洛伐克代表的情况下，强行把苏台德等地区割让给德意志第三帝国。历史上把这次会议称为“慕尼黑阴谋”。至此，绥靖政策达到顶峰。慕尼黑协定的签订产生了很大的消极影响。</p>
-		<img src="http://thumbnail0.baidupcs.com/thumbnail/5b2eccab6752e4b2b77879e4855be7b3?fid=1428530494-250528-751184226423232&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-tLk%2FFkDd%2FeHXqMJidaXsQzcDRak%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407699426411490108&dp-callid=0&size=c710_u400&quality=100" alt="希特勒同法西斯">
+		<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/2.png?raw=true" alt="希特勒同法西斯">
 		<div id="wars">
 			<h4>二战中的主要著名战役</h4>
 			<ul>
@@ -49,95 +322,141 @@
 		</div>
 		<div id="pic">
 			<h3>战争记忆</h3>
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/dc350ea6b8b78ca54700f79f7378eb82?fid=1428530494-250528-651505352222616&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-I6AcEePKpe91yIv200%2BSpljkeA4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407705541405760996&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/24c8e44e57de64b570fc34c3da839cff?fid=1428530494-250528-767317719621051&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-WTTO6XccUhf2nzsOk6ZvNlHHFIY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407712579661263640&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/202d6bfbc5c2e984a793db0d4e47db83?fid=1428530494-250528-51113497118800&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-x3lO6WnDozjFMso4hKfb68PhfuE%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407718902685765197&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/a4618eb1c1a9c03d716164286f4fda6b?fid=1428530494-250528-374952593428718&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-3Z12JY7STQOzK344KpMUltg7VbU%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407724751144495871&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/c71054fd01ddfd1b927aa3f3d6cbc78d?fid=1428530494-250528-764481256295369&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-scG%2F%2BZMdBTyWXwWJNI9x6Vg%2FrR4%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407731015093887411&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/026d233f7c5b87d79d2f28aa34e75d69?fid=1428530494-250528-371023145281443&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-lTaktgQnqjK07sQlUGTerKrjmLg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407736286125034753&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/d7950fb40b4a2015ec6e68bdec5be625?fid=1428530494-250528-331070363650503&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-a%2B47Xfd2%2BIylSXkf%2F5Kte13G4HE%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407741300713873077&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/b7c6e74d7ff47ba91a5cced56245c726?fid=1428530494-250528-143059093621080&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-3EiPWT7VWrCUKvNDpIjgq2S94tQ%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407747939119815136&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/1df01a277681e745115de8953f2c7298?fid=1428530494-250528-188284244604569&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-KiOd4731ExuBcy90aAbYVdqLprs%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407753415509891053&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/30a5c9619319aeff016452d02dac5202?fid=1428530494-250528-303984539146698&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-yXA1ekXGcZseWmuc4Mv76rbtn5U%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407758432517818524&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/9f9436bf327717217e47ee29c5464a04?fid=1428530494-250528-828049156355814&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-4yJESqGP2CjoeAg%2Bi2r8RRXwn%2FU%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407763956644293865&dp-callid=0&size=c710_u400&quality=100" alt="">
-			<img src="http://thumbnail0.baidupcs.com/thumbnail/226c77c60face06c70e41f2014dea53e?fid=1428530494-250528-432976906632390&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-lDTDsz%2FTJ241zFzzRxwXq4O%2FtLY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407769503881168962&dp-callid=0&size=c710_u400&quality=100" alt="">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/3.png?raw=true
+			" alt="3">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/4.png?raw=true" alt="4">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/5.png?raw=true" alt="5">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/6.png?raw=true" alt="6">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/7.png?raw=true" alt="7">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/8.png?raw=true" alt="8">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/9.png?raw=true" alt="9">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/10.png?raw=true" alt="10">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/11.png?raw=true" alt="11">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/12.png?raw=true" alt="12">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/13.png?raw=true" alt="13">
+			<img src="https://github.com/Ray-wl/study-from-xiaowei/blob/%E6%B7%BB%E5%8A%A0CSS%E6%A0%B7%E5%BC%8F/%E5%B0%8F%E5%BE%AE%E5%AD%A6%E9%99%A2/%E5%9F%BA%E7%A1%80HTML/img/14.png?raw=true" alt="14">
 		</div>
 	</div>
 	<div id="paper-3">
-		<h2>文章-3的一级标题</h2>
-		<h3>文章-3 的二级标题</h3>
+		<h2>第二次世界大战影响</h2>
+		<h3>战后伤亡</h3>
 		<div id="deads">
-			<p>军队伤亡人数最多的国家</p>
+			<h4>军队伤亡人数最多的国家<span>（单位：人）</span></h4>
 			<ol>
-				<li>苏联</li>
-				<li>中国</li>
-				<li>美国</li>
+				<li>苏联（13,700,000）</li>
+				<li>中国（2,050,000）</li>
+				<li>美国（292,000）</li>
 			</ol>
-			<p>其他国家军队伤亡情况</p>
-			<table border=1>
+			<h4>其他主要国家军队伤亡情况<span>（单位：人）</span></h4>
+			<table>
 				<th>国家</th>
 				<th>死亡人数</th>
+				<th>详情</th>
 				<tr>
 					<td>澳大利亚</td>
 					<td>23,400</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>加拿大</td>
 					<td>37,500</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>南非</td>
 					<td>6,840</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>新西兰</td>
 					<td>10,000</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>法国和解放法国队伍</td>
 					<td>210,000</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>英国</td>
 					<td>264,000</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>巴西</td>
 					<td>943</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>波兰</td>
 					<td>17,500</td>
+					<td><a href="#">详情</a></td>
+				</tr>
+				<tr>
+					<td>总计</td>
+					<td>16,603,183</td>
+					<td><a href="#"></a></td>
 				</tr>
 			</table>
 		</div>
 	</div>
 	<div id="sidebar">
-		<h3>这里是一个侧边栏，侧边栏的标题</h3>
-		<h4>侧边栏注册窗口标题</h4>
+		<h3>登录/注册</h3>
 		<form action="">
-			<span>请输入邮箱地址：</span><input type="text" placeholder="文本输入框">
-			<p>邮箱地址请按要求格式输入</p>
-			<span>请输入密码：</span><input type="text" placeholder="文本输入框">
-			<span>请输重复入密码：</span><input type="text" placeholder="文本输入框">
-			<p>密码请为6-16位英文数字</p>
-			<span>性别：</span><input type="radio" name="Sex" value="male">男
-			<input type="radio" name="Sex" value="female">女
-			<span>城市：</span>
-			<select name="cities" id="cities">
-				<option value="">深圳</option>
-				<option value="">广州</option>
-				<option value="">北京</option>
-				<option value="">上海</option>
-				<option value="">沈阳</option>
-				<option value="">西安</option>
-				<option value="">长沙</option>
-				<option value="">拉萨</option>
-			</select>
-			<span>爱好</span><input type="checkbox">运动<input type="checkbox">艺术<input type="checkbox">科学
-			<span>个人描述：</span>
-			<textarea name="" id="" cols="30" rows="10">这里是个人描述部分</textarea>
+			<table>
+				<tr>
+					<td>请输入邮箱地址</td>
+					<td><input type="text" placeholder="文本输入框"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="gray">邮箱地址请按要求格式输入</td>
+				</tr>
+				<tr>
+					<td>请输入密码</td>
+					<td><input type="password" placeholder="输入密码"></td>
+				</tr>
+				<tr>
+					<td>请输重复入密码</td>
+					<td><input type="password" placeholder="再次输入密码"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="gray">密码为6-16位英文数字</td>
+				</tr>
+				<tr>
+					<td>性别</td>
+					<td><input type="radio" name="Sex" value="male" id="male"><label for="male"></label>男<input type="radio" name="Sex" value="female" id="female"><label for="female"></label>女</td>
+				</tr>
+				<tr>
+					<td id="city">城市</td>
+					<td>
+						<label id="cities" for="select">
+							<select name="" id="select">
+								<option value="">深圳</option>
+								<option value="">广州</option>
+								<option value="">北京</option>
+								<option value="">上海</option>
+								<option value="">沈阳</option>
+								<option value="">西安</option>
+								<option value="">长沙</option>
+								<option value="">拉萨</option>
+							</select>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td>爱好</td>
+					<td><input type="checkbox" id="sport"><label for="sport"></label>运动<input type="checkbox" id="art"><label for="art"></label>艺术<input type="checkbox" id="science"><label for="science"></label>科学</td>
+				</tr>
+				<tr>
+					<td>个人描述</td>
+					<td><textarea name="" id="" placeholder="这里是个人描述部分"></textarea></td>
+				</tr>
+			</table>
+			<input type="button" value="确认提交" id="btn">
 		</form>
 	</div>
+	<div id="footer">版权所有&copydaleizi</div>
 </body>
 </html>
