@@ -4,13 +4,263 @@
 	<meta charset="UTF-8">
 	<title>基础HTML</title>
 	<style type="text/css">
-
+		* {
+			margin:0;
+			padding:0;
+		}
+		a {
+			text-decoration:none;
+		}
+		body {
+			background:#DEDEDE;
+		}
+		#web-nav {
+			width:100%;
+			height:70px;
+			background: #222222;
+		}
+		#web-nav h1 {
+			color:#ffffff;
+			float:left;
+			line-height:70px;
+			margin-left:40px;
+			cursor:pointer;
+		}
+		#web-menu {
+			width:900px;
+			margin:0 auto;
+		}
+		#web-menu ul {
+			height:70px;
+			float:right;
+			padding:20px 0;
+		}
+		#web-menu ul li {
+			float:left;
+			width:70px;
+			height:30px;
+			color:#ccc;
+			margin-left:20px;
+		}
+		#web-menu ul li:hover,#web-menu ul li:hover a {
+			color:#EA5527;
+			font-size:0.9em;
+		}
+		#web-menu ul a {
+			color:#ccc;
+			font-size:0.75em;
+			line-height:30px;
+		}
+		#paper-1,#paper-2,#paper-3,#sidebar {
+			box-sizing:border-box;
+			width:900px;
+			border:1px solid rgba(0,0,0,0.3);
+			margin:10px auto;
+			background: #fff;
+			box-shadow:2px 2px 0 0 rgba(0,0,0,0.3);
+			padding:40px 30px 30px;
+		}
+		img {
+			display: block;
+		}
+		#pic img {
+			margin-top:10px;
+			border:1px solid #ccc;
+			padding:10px;;
+			width:150px;
+		}
+		h2 {
+			margin-bottom:20px;
+		}
+		h3 {
+			margin:20px 0 20px;
+			color:rgba(0,0,0,0.8);
+		}
+		h4 {
+			margin:10px 0 10px;
+		}
+		p {
+			text-indent:2em;
+			line-height:1.7em;
+			margin:10px 0;
+			text-align:justify;
+		}
+		.date {
+			text-indent:0em;
+			color:rgba(0,0,0,0.6);
+			font-size:0.9em;
+			font-weight:bold;
+		}
+		#paper-2 ul,#paper-3 ol {
+			margin-left:50px;
+		}
+		#paper-2 ul li {
+			line-height:30px;
+		}
+		#paper-2 ul a {
+			color:rgba(0,0,0,1);
+		}
+		#paper-3 h4 {
+			text-indent:2em;
+			font-size:0.95em;
+		}
+		#paper-3 h4 span {
+			font-size:0.7em;
+			font-weight:normal;
+		}
+		ol li {
+			line-height:30px;
+		}
+		#paper-3 table {
+			width:95%;
+			margin:0 auto;
+			text-align:center;
+			border-collapse: collapse;
+			font-size:0.8em;
+			line-height:26px;
+			border:1px solid #ccc;
+		}
+		#paper-3 th,td {
+			border:1px solid #ccc;
+		}
+		#paper-3 th {
+			background: rgba(0,0,0,0.8);
+			color:#fff;
+		}
+		#paper-3 tr:last-child {
+			background: #ccc;
+			font-weight:bold;
+		}
+		#paper-3 tr td:first-child {
+			width:40%;
+		}
+		#paper-3 tr td:last-child {
+			width:15%;
+		}
+		#sidebar {
+			font-size:0.8em;
+		}
+		#sidebar table {
+			width:90%;
+			margin:0 auto;
+		}
+		#sidebar table td {
+			border:none;
+			padding-left:20px;
+			height:30px;
+		}
+		#sidebar td:first-child {
+			text-align:right;
+		}
+		#sidebar td:last-child {
+			text-align:left;
+		}
+		#sidebar textarea {
+			width:80%;
+			height:90px;
+			padding:5px 10px;
+		}
+		#sidebar input[type=text],#sidebar input[type=password] {
+			width:35%;
+			height:22px;
+			padding:0 10px;
+			border:1px solid #ccc;
+			font-size:0.9em;
+		}
+		.gray {
+			font-size:0.9em;
+			color:rgba(0,0,0,0.5);
+		}
+		#btn {
+			width:95%;
+			height:40px;
+			border-radius:10px;
+			background:#3355D0;
+			border:none;
+			color:#fff;
+			font-size:1.2em;
+			font-weight:bold;
+			cursor:pointer;
+			display: block;
+			margin:20px auto 0;
+		}
+		#sidebar h3 {
+			margin-top:0px;
+		}
+		#sidebar input[type=radio] {
+			display: none;
+		}
+		#sidebar input[type=radio] + label {
+			margin-left:20px;
+			margin-right:5px;
+			display: inline-block;
+			width:13px;
+			height:13px;
+			box-sizing:border-box;
+			border-radius:100%;
+			border:1px solid rgba(0,0,0,0.4);
+		}
+		#sidebar input[type=radio]:checked + label {
+			border:4px solid #3499FF;
+		}
+		#sidebar input[type=radio]:first-child + label {
+			margin-left:0px;
+		}
+		#sidebar input[type=checkbox] {
+			display: none;
+		}
+		#sidebar input[type=checkbox] + label {
+			display: inline-block;
+			width:9px;
+			height:9px;
+			border-radius:2px;
+			border:1px solid rgba(0,0,0,0.5);
+			margin:0 2px 0 5px;
+		}
+		#sidebar input[type=checkbox]:checked + label {
+			border-color:#3499FF;
+			background: #3499FF;
+		}
+		select {
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+			border:none;
+			background: transparent;
+			width:100%;
+			height:20px;
+			font-size:0.85em;
+			/*text-align:center;*/
+			line-height:20px;
+			border-radius:3px;
+			border:1px solid rgba(0,0,0,0.5);
+			display: block;
+			/*background: red;*/
+		}
+		#cities {
+			width:15%;
+			height:20px;
+			display: block;
+			position:relative;
+		}
+		#cities::after {
+			box-sizing:border-box;
+			content:"";
+			width:15px;
+			height:20px;
+			background: #3499FF;
+			position:absolute;
+			top:0px;
+			right:0px;
+			display: inline-block;
+			border-radius:0 3px 3px 0;
+		}
 	</style>
 </head>
 <body>
 	<div id="web-nav">
-		<h1>网站一级标题</h1>
 		<div id="web-menu">
+			<h1>第二次世界大战简史</h1>
 			<ul>
 				<li class="web-menu"><a href="#">导航链接一</a></li>
 				<li class="web-menu"><a href="#">导航链接二</a></li>
@@ -20,18 +270,18 @@
 		</div>
 	</div>
 	<div id="paper-1">
-		<h2>文章一级标题</h2>
-		<h3>文章二级标题</h3>
-		<p>文章作者  文章发表时间</p>
+		<h2>第二次世界大战</h2>
+		<h3>事件简述</h3>
+		<p class="date">文章作者  文章发表时间</p>
 		<p>第二次世界大战（World War II，简称二战，亦可称世界反法西斯战争）。1939年9月1日—1945年9月2日，以德意志第三帝国、意大利王国、日本帝国三个法西斯轴心国和匈牙利王国、罗马尼亚王国、保加利亚王国等仆从国为一方，以<a href="http://www.baidu.com">反法西斯同盟</a>和全世界反法西斯力量为另一方进行的第二次全球规模的战争。</p>
 		<img src="http://thumbnail0.baidupcs.com/thumbnail/fa8b43f25deef7544bd20c48114355aa?fid=1428530494-250528-671428094491423&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ymIrlQ%2BE7wT6gV66s6JYr%2Fg2SjY%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407684581849662841&dp-callid=0&size=c710_u400&quality=100" alt="诺曼底登陆">
 		<p>从欧洲到亚洲，从大西洋到太平洋，先后有61个国家和地区、20亿以上的人口被卷入战争，作战区域面积2200万平方千米。据不完全统计，战争中军民共伤亡9000余万人，4万多亿美元付诸流水。</p>
 		<p>第二次世界大战最后以美国、苏联、英国、<a href="http://www.sina.com.cn">中华民国</a>等反法西斯国家和世界人民战胜法西斯侵略者赢得世界和平与进步而告终。</p>
 	</div>
 	<div id="paper-2">
-		<h2>战争背景</h2>
+		<h2>第二次世界大战战争背景</h2>
 		<h3>慕尼黑阴谋</h3>
-		<p>文章作者  文章发表时间</p>
+		<p class="date">文章作者  文章发表时间</p>
 		<p>1938年3月，德意志第三帝国并吞了奥地利。接着，希特勒以保护捷克斯洛伐克境内德意志少数民族的利益为借口，对捷克斯洛伐克提出领土要求。面对德意志第三帝国法西斯的咄咄逼人的侵略，英法两国以牺牲捷克斯洛伐克的利益，并与希特勒达成协议，希望把德意志第三帝国的侵略矛头引向苏联。</p>
 		<p>1938年9月，英、法、德、意四国首脑阿瑟·尼维尔·张伯伦、爱德华·达拉第、<a href="http://www.baidu.com">阿道夫·希特勒</a>和贝尼托·墨索里尼在德意志第三帝国的慕尼黑开会，签订协议，在没有捷克斯洛伐克代表的情况下，强行把苏台德等地区割让给德意志第三帝国。历史上把这次会议称为“慕尼黑阴谋”。至此，绥靖政策达到顶峰。慕尼黑协定的签订产生了很大的消极影响。</p>
 		<img src="http://thumbnail0.baidupcs.com/thumbnail/5b2eccab6752e4b2b77879e4855be7b3?fid=1428530494-250528-751184226423232&time=1488441600&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-tLk%2FFkDd%2FeHXqMJidaXsQzcDRak%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=1407699426411490108&dp-callid=0&size=c710_u400&quality=100" alt="希特勒同法西斯">
@@ -64,79 +314,123 @@
 		</div>
 	</div>
 	<div id="paper-3">
-		<h2>文章-3的一级标题</h2>
-		<h3>文章-3 的二级标题</h3>
+		<h2>第二次世界大战影响</h2>
+		<h3>战后伤亡</h3>
 		<div id="deads">
-			<p>军队伤亡人数最多的国家</p>
+			<h4>军队伤亡人数最多的国家<span>（单位：人）</span></h4>
 			<ol>
-				<li>苏联</li>
-				<li>中国</li>
-				<li>美国</li>
+				<li>苏联（13,700,000）</li>
+				<li>中国（2,050,000）</li>
+				<li>美国（292,000）</li>
 			</ol>
-			<p>其他国家军队伤亡情况</p>
-			<table border=1>
+			<h4>其他主要国家军队伤亡情况<span>（单位：人）</span></h4>
+			<table>
 				<th>国家</th>
 				<th>死亡人数</th>
+				<th>详情</th>
 				<tr>
 					<td>澳大利亚</td>
 					<td>23,400</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>加拿大</td>
 					<td>37,500</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>南非</td>
 					<td>6,840</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>新西兰</td>
 					<td>10,000</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>法国和解放法国队伍</td>
 					<td>210,000</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>英国</td>
 					<td>264,000</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>巴西</td>
 					<td>943</td>
+					<td><a href="#">详情</a></td>
 				</tr>
 				<tr>
 					<td>波兰</td>
 					<td>17,500</td>
+					<td><a href="#">详情</a></td>
+				</tr>
+				<tr>
+					<td>总计</td>
+					<td>16,603,183</td>
+					<td><a href="#"></a></td>
 				</tr>
 			</table>
 		</div>
 	</div>
 	<div id="sidebar">
-		<h3>这里是一个侧边栏，侧边栏的标题</h3>
-		<h4>侧边栏注册窗口标题</h4>
+		<h3>登录/注册</h3>
 		<form action="">
-			<span>请输入邮箱地址：</span><input type="text" placeholder="文本输入框">
-			<p>邮箱地址请按要求格式输入</p>
-			<span>请输入密码：</span><input type="text" placeholder="文本输入框">
-			<span>请输重复入密码：</span><input type="text" placeholder="文本输入框">
-			<p>密码请为6-16位英文数字</p>
-			<span>性别：</span><input type="radio" name="Sex" value="male">男
-			<input type="radio" name="Sex" value="female">女
-			<span>城市：</span>
-			<select name="cities" id="cities">
-				<option value="">深圳</option>
-				<option value="">广州</option>
-				<option value="">北京</option>
-				<option value="">上海</option>
-				<option value="">沈阳</option>
-				<option value="">西安</option>
-				<option value="">长沙</option>
-				<option value="">拉萨</option>
-			</select>
-			<span>爱好</span><input type="checkbox">运动<input type="checkbox">艺术<input type="checkbox">科学
-			<span>个人描述：</span>
-			<textarea name="" id="" cols="30" rows="10">这里是个人描述部分</textarea>
+			<table>
+				<tr>
+					<td>请输入邮箱地址</td>
+					<td><input type="text" placeholder="文本输入框"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="gray">邮箱地址请按要求格式输入</td>
+				</tr>
+				<tr>
+					<td>请输入密码</td>
+					<td><input type="password" placeholder="输入密码"></td>
+				</tr>
+				<tr>
+					<td>请输重复入密码</td>
+					<td><input type="password" placeholder="再次输入密码"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td class="gray">密码为6-16位英文数字</td>
+				</tr>
+				<tr>
+					<td>性别</td>
+					<td><input type="radio" name="Sex" value="male" id="male"><label for="male"></label>男<input type="radio" name="Sex" value="female" id="female"><label for="female"></label>女</td>
+				</tr>
+				<tr>
+					<td id="city">城市</td>
+					<td>
+						<div id="cities">
+							<select name="">
+								<option value="">深圳</option>
+								<option value="">广州</option>
+								<option value="">北京</option>
+								<option value="">上海</option>
+								<option value="">沈阳</option>
+								<option value="">西安</option>
+								<option value="">长沙</option>
+								<option value="">拉萨</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>爱好</td>
+					<td><input type="checkbox" id="sport"><label for="sport"></label>运动<input type="checkbox" id="art"><label for="art"></label>艺术<input type="checkbox" id="science"><label for="science"></label>科学</td>
+				</tr>
+				<tr>
+					<td>个人描述</td>
+					<td><textarea name="" id="" placeholder="这里是个人描述部分"></textarea></td>
+				</tr>
+			</table>
+			<input type="button" value="确认提交" id="btn">
 		</form>
 	</div>
 </body>
